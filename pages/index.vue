@@ -1,9 +1,11 @@
 <template>
-  <Tutorial/>
+  <div class="row"><h3></h3></div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+    mounted(){
+      $nuxt.$router.push("/dashboard");
+    }
 }
 </script>

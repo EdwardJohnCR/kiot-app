@@ -34,26 +34,26 @@
         >
         </sidebar-item>
 
-
         <sidebar-item
-        :link="{
-          name: 'Templates',
-          icon: 'tim-icons icon-chart-pie-36',
-          path: '/templates'
-        }"
-      >
-      </sidebar-item>
+          :link="{
+            name: 'Templates',
+            icon: 'tim-icons icon-chart-pie-36',
+            path: '/templates'
+          }"
+        >
+        </sidebar-item>
 
-      <li class="active-pro">
+        <li class="active-pro">
           <a href="https://kikilma.net" target="_blank">
             <i class="tim-icons icon-spaceship"></i>
             <p>kikilma</p>
           </a>
         </li>
-
-
       </template>
     </side-bar>
+
+    <!--Share plugin (for demo purposes). You can remove it if don't plan on using it-->
+    <sidebar-share :background-color.sync="sidebarBackground"> </sidebar-share>
 
     <div class="main-panel" :data="sidebarBackground">
       <dashboard-navbar></dashboard-navbar>
@@ -103,7 +103,8 @@ export default {
   },
   data() {
     return {
-      sidebarBackground: "vue" //vue|blue|orange|green|red|primary
+      sidebarBackground: "primary"
+      //vue|blue|orange|green|red|primary
     };
   },
   computed: {
