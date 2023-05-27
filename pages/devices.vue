@@ -75,7 +75,7 @@
 
         <el-table :data="devices">
           <el-table-column label="#" min-width="50" align="center">
-            <div slot-scope="{ row, $index }">
+            <div slot-scope="{ $index }">
               {{ $index + 1 }}
             </div>
           </el-table-column>
@@ -91,8 +91,14 @@
 
           <el-table-column label="Actions">
             <div slot-scope="{ row, $index }">
-              {{ row.saverRule }}
 
+              
+              
+              <el-tooltip content="Saver Status Indicator" style="margin-right:10px">
+                <i class="fas fa-database " :class="{'text-success' : row.saverRule, 'text-dark' : !row.saverRule}" ></i>
+              </el-tooltip>
+
+            <!-- SWITCH DATABASE -->
               <el-tooltip content="Database Saver">
                 <base-switch
                   @click="updateSaverRuleStatus($index)"
@@ -101,8 +107,9 @@
                   on-text="On"
                   off-text="Off"
                 ></base-switch>
+              
               </el-tooltip>
-
+            <!-- DELETE -->
               <el-tooltip
                 content="Delete"
                 effect="light"
@@ -152,7 +159,6 @@ export default {
           templateName: "Power Sensor",
           templateId: "984237562348756ldksjfh",
           saverRule: false,
-          count: 100
         },
 
         {
