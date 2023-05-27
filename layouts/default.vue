@@ -10,7 +10,7 @@
         <sidebar-item
           :link="{
             name: 'Dashboard',
-            icon: 'tim-icons icon-chart-pie-36',
+            icon: 'tim-icons icon-tv-2',
             path: '/dashboard'
           }"
         >
@@ -19,7 +19,7 @@
         <sidebar-item
           :link="{
             name: 'Devices',
-            icon: 'tim-icons icon-chart-pie-36',
+            icon: 'tim-icons icon-atom',
             path: '/devices'
           }"
         >
@@ -28,7 +28,7 @@
         <sidebar-item
           :link="{
             name: 'Alarms',
-            icon: 'tim-icons icon-chart-pie-36',
+            icon: 'tim-icons icon-notes',
             path: '/alarms'
           }"
         >
@@ -37,7 +37,7 @@
         <sidebar-item
           :link="{
             name: 'Templates',
-            icon: 'tim-icons icon-chart-pie-36',
+            icon: 'tim-icons icon-molecule-40',
             path: '/templates'
           }"
         >
@@ -70,7 +70,7 @@
   </div>
 </template>
 
-<script>
+<script >
 /* eslint-disable no-new */
 import PerfectScrollbar from "perfect-scrollbar";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
@@ -103,7 +103,9 @@ export default {
   },
   data() {
     return {
-      sidebarBackground: "primary"
+
+      //change color principal
+      sidebarBackground: "blue"
       //vue|blue|orange|green|red|primary
     };
   },
