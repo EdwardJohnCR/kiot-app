@@ -1,4 +1,3 @@
-//requires
 const express = require("express");
 
 //instances
@@ -11,5 +10,5 @@ app.listen(3001, () => {
 
 //endpoint test
 app.get("/testing", (req, res) => {
-  res.send("Hello IoT kikilma API");
+  res.send("API KONTROL");
 });
