@@ -18,10 +18,13 @@ app.use(
     extended: true
   })
 );
-app.use(cors());
+app.use(cors())
 
 //express routes
-app.use("/api1", require("./routers/devices.js"));
+app.use("/api1", require("./routes/devices.js"));
+
+//app.use("/api", require("./routes/devices.js"));
+//app.use("/api", require("./routes/users.js"));
 
 module.exports = app;
 
